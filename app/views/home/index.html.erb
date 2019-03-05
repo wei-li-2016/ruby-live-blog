@@ -1,0 +1,20 @@
+<div class="wrapper">
+  <div class="title">
+    <h1>Live blog with Ruby and Pusher</h1>
+    <p>New posts will be displayed in realtime</p>
+  </div>
+
+  <div class="posts" id="post_section">
+    <% @posts.each do |post| %>
+      <div class="post-card">
+        <img class="image" src="<%= post.media %>">
+        <div class="title">
+          <h2><%= post.title %></h2>
+        </div>
+        <div class="body-trunc">
+          <p><%= post.body %></p>
+        </div>
+      </div>
+    <% end %>
+  </div>
+</div>
